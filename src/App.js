@@ -74,13 +74,13 @@ export default function App() {
         <div className={`${isOpen ? 'sidebar open' : 'sidebar close'}`}>
           <ul>
             <li>
-              <Link to="/"><i className="fa fa-chevron-right"></i>Home</Link>
+              <Link to="/"><i className="fa fa-chevron-right"></i><span>Home</span></Link>
             </li>
             <li>
-              <Link to="/list"><i className="fa fa-chevron-right"></i>List</Link>
+              <Link to="/list"><i className="fa fa-chevron-right"></i><span>List</span></Link>
             </li>
             <li>
-              <Link to="/create"><i className="fa fa-chevron-right"></i>Create</Link>
+              <Link to="/create"><i className="fa fa-chevron-right"></i><span>Create</span></Link>
             </li>
           </ul>
 
