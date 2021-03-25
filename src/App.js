@@ -37,28 +37,32 @@ import './App.css';
 
 
 export default function App() {
+
+  const [isOpen, setOpen] = useState(false)
+
+  console.log("isopen", isOpen)
   return (
     <Router>
       <div>
 
-        <div class="navbar-top">
-          <div class="openbtn" >
-            <i class="fa fa-bars" aria-hidden="true"></i>
+        <div className="navbar-top">
+          <div className="openbtn" onClick={() => setOpen(!isOpen)} >
+            <i className="fa fa-bars" aria-hidden="true"></i>
           </div>
-          <div class="logo-wrapper">
+          <div className="logo-wrapper">
             <Link to="/"><img src="logo.png" /></Link>
           </div>
-          <div class="title-wrapper">
+          <div className="title-wrapper">
             <h3>COOPSERVICE COMMUNITY</h3>
           </div>
-          <ul class="user-menu">
+          <ul className="user-menu">
             <li>Benvenuto</li>
             <li>
               <a>
-                <span class="profile-name"
+                <span className="profile-name"
                 >Username</span
                 >
-                <i class="material-icons ui-icon-keyboard-arrow-down"></i>
+                <i className="material-icons ui-icon-keyboard-arrow-down"></i>
               </a>
             </li>
 
@@ -67,21 +71,21 @@ export default function App() {
 
         </div>
 
-        <div class="sidebar open">
+        <div className={`${isOpen ? 'sidebar open' : 'sidebar close'}`}>
           <ul>
             <li>
-              <Link to="/"><i class="fa fa-chevron-right"></i>Home</Link>
+              <Link to="/"><i className="fa fa-chevron-right"></i>Home</Link>
             </li>
             <li>
-              <Link to="/list"><i class="fa fa-chevron-right"></i>List</Link>
+              <Link to="/list"><i className="fa fa-chevron-right"></i>List</Link>
             </li>
             <li>
-              <Link to="/create"><i class="fa fa-chevron-right"></i>Create</Link>
+              <Link to="/create"><i className="fa fa-chevron-right"></i>Create</Link>
             </li>
           </ul>
 
         </div>
-        <div id="main" class="close">
+        <div id="main" className={`${isOpen ? 'close' : 'open'}`}>
 
 
           <Switch>
