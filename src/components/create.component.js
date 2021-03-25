@@ -75,8 +75,9 @@ function CreateComponent() {
 
                     </div>
                     <div class="p-col-6">
-                        <Button label="Danger" className="p-button-secondary pull-right" />
-                        <Button label="Danger" className="p-button-primary pull-right" />
+                        <Button label="Salva" icon="pi pi-save" className="p-button-secondary pull-right" />
+                        <Button label="Anulla" className="p-button-primary pull-right" />
+
                     </div>
                 </div>
             </div>

@@ -18,6 +18,7 @@ import {
   Switch,
   Route,
   Link,
+  useHistory,
   useRouteMatch,
   useParams
 } from "react-router-dom";
@@ -200,10 +201,16 @@ function ListComponent() {
 
 
   const statusBodyTemplate = (rowData) => {
-    return <Button label="Danger" className="p-button-secondary" />;
+    return <Button onClick={createUrl} icon="pi pi-eye" label="visualizza" />;
   }
 
+  const history = useHistory();
 
+
+  const createUrl = () => {
+    let path = `create`;
+    history.push(path);
+  }
 
   let headerGroup = <ColumnGroup>
 
@@ -245,11 +252,11 @@ function ListComponent() {
 
             <div class="p-grid">
               <div class="p-col-6">
-                <Button label="Danger" className="p-button-secondary pull-right btn-block" />
+                <Button label="Salva" className="p-button-secondary pull-right btn-block" />
 
               </div>
               <div class="p-col-6">
-                <Button label="Danger" className="p-button-primary pull-right btn-block" />
+                <Button label="Annulla" className="p-button-primary pull-right btn-block" />
               </div>
             </div>
           </div>
@@ -262,7 +269,7 @@ function ListComponent() {
 
           </div>
           <div class="p-col-6">
-            <Button label="Danger" className="p-button-secondary pull-right" />
+            <Button label="Aggiungi" icon="pi pi-plus" className="p-button-secondary pull-right" />
             <Button label="Danger" className="p-button-primary pull-right" />
           </div>
         </div>

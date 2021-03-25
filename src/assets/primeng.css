@@ -581,6 +581,12 @@
 .p-button.btn-block {
     width: 100%;
   }
+
+  .p-button.p-button-icon-only {
+    width: 30px;
+    padding: 0.5rem 0;
+}
+
 .p-button.p-button-primary {
     color: #ffffff !important;
     background-color: #333333 !important;
